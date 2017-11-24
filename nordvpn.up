@@ -1,0 +1,8 @@
+YOURNORDVPNUSER@HE.RE
+YOURNORDVPNPASSHERE
+# This file holds your NordVPN credentials to facilitate the automation of the nordp2p script.
+# Make sure the nordp2p script can find it (unless you want to provide credentials every time).
+# Default location for this file is: /etc/openvpn/nordvpn.up
+#
+# I recommend setting this file to be accessible by root only, so something like:
+#	sudo chmod 640 nordvpn.up && sudo chown root:root nordvpn.up
