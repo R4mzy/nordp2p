@@ -18,33 +18,33 @@ Those files should be extracted to `/etc/openvpn/nordvpn/`. Here's a one-liner:
   
 ### Clone/download this repo, and copy the files to where they should go. 
 Typically, *nordvpn.up* and *nordp2p.list* would go to `/etc/openvpn`, while *nordp2p.sh* would go to `/usr/local/sbin`. That *nordp2p.sh* file should also be executable.  
+
 This one-liner will do that for you:  
-  `$ git clone https://github.com/R4mzy/nordp2p.git && sudo cp ./nordp2p/nordvpn.up ./nordp2p/nordp2p.list /etc/openvpn/ && sudo cp ./nordp2p/nordp2p.sh /usr/local/sbin/ && sudo chmod +x /usr/local/sbin/nordp2p.sh`  
+    $ git clone https://github.com/R4mzy/nordp2p.git && sudo cp ./nordp2p/nordvpn.up ./nordp2p/nordp2p.list /etc/openvpn/ && sudo cp ./nordp2p/nordp2p.sh /usr/local/sbin/ && sudo chmod +x /usr/local/sbin/nordp2p.sh
   
-  A note about the *nordvpn.list* file: 
-    The list was last generated on: 17 July 2017. 
-    Nord might have changed their P2P servers since then.  
-    The generation of the list has not been automated because I haven't figured out how to do that yet. 
-      *HELP WANTED*   
+The *nordvpn.list* file was last generated on *17 July 2017*. Nord might have changed their P2P servers since then.  
+The generation of the list has not been automated because I haven't figured out how to do that yet.  
+  *HELP WANTED*   
   
 ### Supply your NordVPN credentials in the *nordvpn.up* file, which is now in `/etc/openvpn/`.  
-See the notes included in the file for more info. 
-  `$ sudo vim /etc/openvpn/nordvpn.up`  
-    I like vim. Use whatever editor you prefer. 
-  TODO: confirm this file still works with the commented lines included.  
+See the notes included in the file for more info. I like vim. Use whatever editor you prefer.
+    $ sudo vim /etc/openvpn/nordvpn.up
+
 Once you have entered your credentials into the file, you might want to lock it down: 
-  `$ sudo chmod 640 /etc/nordvpn/nordvpn.up && sudo chown root:root /etc/nordvpn/nordvpn.up`  
+    $ sudo chmod 640 /etc/nordvpn/nordvpn.up && sudo chown root:root /etc/nordvpn/nordvpn.up 
+  
+TODO: confirm this file still works with the commented lines included.  
   
 ### You're mostly done. 
 Assuming `/usr/local/sbin` is included in your $PATH variable, you can call the script with:  
-  `$ sudo nordp2p.sh` 
+    $ sudo nordp2p.sh
 That will give you the usage instructions. You basically just use *start* and *stop*. 
   
 ### Automate the thing so it runs on boot (if you want).  
 Edit your root user's crontab:  
-  `$ sudo crontab -e` 
+    $ sudo crontab -e
 Add this line to it:  
-  `@reboot sudo /usr/local/sbin/nordp2p.sh start` 
+    @reboot sudo /usr/local/sbin/nordp2p.sh start
     
 ### Look at the script file.  
 If you want to customise things. Or improve them. Suggestions are welcome.  
