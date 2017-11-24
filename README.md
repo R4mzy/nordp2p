@@ -1,7 +1,6 @@
 # nordp2p
 ### a script for connecting to NordVPN P2P servers with OpenVPN on Linux (Ubuntu)
-It will also launch the (daemonised) transmission. 
-(Transmission is a BitTorrent client.)
+It will also launch a daemon for transmission (a BitTorrent client).
 
 Should the VPN connection be terminated or fail, OpenVPN will kill the transmission daemon too.
 
