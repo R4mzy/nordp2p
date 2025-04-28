@@ -1,4 +1,9 @@
 # nordp2p 
+## Deprecating, Archiving
+Unmaintained, unused, unloved (sniff), unnecessary, un...
+Nord has better Linux support, I don't use them anymore, I stopped using this long before I stopped using them...
+;) JJF-250428
+
 ### a script for connecting to NordVPN P2P servers with OpenVPN on Linux (Ubuntu) 
 It will also launch a daemon for transmission (a BitTorrent client).  
   
